@@ -1,0 +1,13 @@
+meta:
+  environment: python
+  toolchain:
+    name: pip
+    version: "24"
+
+build:
+  pythonVersion: "3.12"
+
+run:
+  persistenceMount: /app/uploads
+  containerPort: 8000
+  command: uvicorn server.main:app --host 0.0.0.0 --port 8000
